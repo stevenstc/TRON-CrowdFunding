@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CrowfundingTRX/static/css/main.d2d6fd33.chunk.css",
+    "main.js": "/CrowfundingTRX/static/js/main.e5638d39.chunk.js",
+    "main.js.map": "/CrowfundingTRX/static/js/main.e5638d39.chunk.js.map",
+    "runtime-main.js": "/CrowfundingTRX/static/js/runtime-main.5b207f49.js",
+    "runtime-main.js.map": "/CrowfundingTRX/static/js/runtime-main.5b207f49.js.map",
+    "static/js/2.83301b7d.chunk.js": "/CrowfundingTRX/static/js/2.83301b7d.chunk.js",
+    "static/js/2.83301b7d.chunk.js.map": "/CrowfundingTRX/static/js/2.83301b7d.chunk.js.map",
+    "index.html": "/CrowfundingTRX/index.html",
+    "precache-manifest.43c03cc6f3cb7295e9b107294d4d72f1.js": "/CrowfundingTRX/precache-manifest.43c03cc6f3cb7295e9b107294d4d72f1.js",
+    "service-worker.js": "/CrowfundingTRX/service-worker.js",
+    "static/css/main.d2d6fd33.chunk.css.map": "/CrowfundingTRX/static/css/main.d2d6fd33.chunk.css.map",
+    "static/js/2.83301b7d.chunk.js.LICENSE.txt": "/CrowfundingTRX/static/js/2.83301b7d.chunk.js.LICENSE.txt",
+    "static/media/TronLinkLogo.png": "/CrowfundingTRX/static/media/TronLinkLogo.d3a8f115.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5b207f49.js",
+    "static/js/2.83301b7d.chunk.js",
+    "static/css/main.d2d6fd33.chunk.css",
+    "static/js/main.e5638d39.chunk.js"
+  ]
+}
