@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/CrowfundingTRX/precache-manifest.e438b632bb5a31b69579b25b92c98a3c.js"
+  "/CrowfundingTRX/precache-manifest.15e74d665d03bad4579418e1eb4f2db0.js"
 );
 
 self.addEventListener('message', (event) => {
