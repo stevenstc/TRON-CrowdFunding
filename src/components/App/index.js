@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import TronWeb from "tronweb";
 
 import Utils from "../../utils";
-import ECommerce from "../ECommerce"; 
+import CrowdFunding from "../CrowdFunding";
+import Datos from "../Datos";
+import Oficina from "../Oficina";
 import TronLinkInfo from "../TronLinkInfo";
 import TronLinkGuide from "../TronLinkGuide";
 import "./App.scss";
@@ -106,52 +108,32 @@ class App extends Component {
 
     return (
       <div>
-        <header className="header-container">
-          <div className="resource-links-container">
-            <div className="app-title">TRX-Mensajes (Mensajes descentralizados)</div>
-            <a
-              className=""
-              href="https://developers.tron.network/docs"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Guías
-            </a>
-            &nbsp; - &nbsp;
-            <a
-              className=""
-              href="https://developers.tron.network/docs"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              API Reference
-            </a>
-             &nbsp; - &nbsp;
-            <a
-              className=""
-              href="https://tronscan.org/#/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              TronScan
-            </a>
-             &nbsp; - &nbsp;
-            <a
-              className=""
-              href="https://tronstation.io/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              TronStation
-            </a>
-          </div>
-          <TronLinkInfo />
-        </header>
         <div>
-          <ECommerce />
+          <section id="why-us" className="wow fadeIn">
+            <div className="container">
+              <header className="section-header">
+                  <h3>Has tu inversión</h3>
+              </header>
+              <div  className="row row-eq-height justify-content-center">
+                <CrowdFunding />
+                <TronLinkInfo />
+              </div>
+              <div >
+                <Datos />
+              </div>
+            </div>
+          </section>
+          
+          <section id="services" className="section-bg">
+            <Oficina /> 
+          </section>
         </div>
       </div>
-    );
+      
+
+
+      );
+
   }
 }
 export default App;

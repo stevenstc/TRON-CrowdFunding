@@ -7,9 +7,9 @@ export default class TronLinkInfo extends Component {
     super(props);
 
     this.state = {
-      accountAddress: "account address will show up here",
-      accountBalance: "account balance will show up here",
-      accountBandwidth: "account bandwidth will show up here"
+      accountAddress: "Billetera NO conectada",
+      accountBalance: "Billetera NO conectada",
+      accountBandwidth: "Billetera NO conectada"
     };
   }
 
@@ -59,16 +59,21 @@ export default class TronLinkInfo extends Component {
   render() {
     const { accountAddress, accountBalance, accountBandwidth,} = this.state;
     return (
-      <div className="tronLinkInfo-component-container">
-        <div className="account-info-header"> Account Information </div>
-        <div className="account-info-address">
-          Address: <span>{accountAddress}</span>
-        </div>
-        <div className="account-info-balance">
-          Balance: <span>{accountBalance}</span>
-        </div>
-        <div className="account-info-bandwidth">
-          Bandwidth: <span>{accountBandwidth}</span>
+      <div className="col-lg-5 mb-5">
+        <div className="card wow bounceInUp">
+            <i className="fa fa-address-card-o"></i>
+          <div className="card-body">
+            <h5 className="card-title">Información de la cuenta</h5>
+            <h6 className="card-text">
+              Dirección:<br></br>
+               <strong><span>{accountAddress}</span></strong><br></br>
+              Balance:<br></br>
+               <strong><span>{accountBalance}</span></strong><br></br>
+              Bandwidth:<br></br>
+               <strong><span>{accountBandwidth}</span></strong><br></br>
+              
+            </h6>
+          </div>
         </div>
       </div>
     );
