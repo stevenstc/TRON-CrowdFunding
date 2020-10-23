@@ -30,7 +30,7 @@ export default class EarnTron extends Component {
     this.setState({
       totalInvestors: parseInt(esto.Investors._hex),
       totalInvested: parseInt(esto.Invested._hex)/1000000,
-      totalRefRewards: parseInt(esto.RefRewards._hex)
+      totalRefRewards: parseInt(esto.RefRewards._hex)/1000000
 
     });
 

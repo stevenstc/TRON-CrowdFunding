@@ -30,15 +30,21 @@ export default class EarnTron extends Component {
             var tmp = GET[i].split('=');
             get[tmp[0]] = unescape(decodeURI(tmp[1]));
         }
-        if (get['ref'].length === 34) {
-          document.getElementById('sponsor').value = get['ref'];
-          if (get['owner']) {
-            document.getElementById('tarifa').value = 1;
-          }
+        if (get['capital']) {
+          document.getElementById('tarifa').value = 1;
+          document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
         }else{
-           document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+          if (get['ref'].length === 34) {
+            document.getElementById('tarifa').value = 0;
+            document.getElementById('sponsor').value = get['ref'];            
+          }else{
+            document.getElementById('tarifa').value = 0;
+             document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+          }
         }
+        
     }else{
+        document.getElementById('tarifa').value = 0;
         document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb'; 
     }
 
@@ -70,10 +76,10 @@ export default class EarnTron extends Component {
             <form>
               <div className="form-group">
                 <input type="text" className="form-control" id="amount" placeholder="Min. 200 TRX"></input>
-                <p className="card-text">Deberías tener ~3 TRX para hacer la transacción</p>
+                <p className="card-text">Debes tener ~3 TRX para hacer la transacción</p>
               </div>
             </form>
-          <button type="button" class="btn btn-light" onClick={() => this.deposit()}>Invest</button>
+          <button type="button" class="btn btn-light" onClick={() => this.deposit()}>Invertir</button>
           
         </div>
       </div>

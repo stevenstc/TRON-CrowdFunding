@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import Utils from "../../utils";
 
 
@@ -76,6 +77,7 @@ export default class EarnTron extends Component {
     await Utils.contract.withdraw().send()
   };
 
+
   render() {
     const { balanceRef, totalRef, invested,  withdrawn , my, direccion, link} = this.state;
 
@@ -85,7 +87,12 @@ export default class EarnTron extends Component {
 
         <header className="section-header">
           <h3>My Office: {direccion}</h3><br></br>
-          <a href={link}>{link}</a>
+          <h6><a href={link}>{link}</a>&nbsp;
+          <CopyToClipboard text={link}>
+            <button type="button" className="btn btn-info">COPIAR</button>
+          </CopyToClipboard>
+          </h6><br></br>
+          
         </header>
 
         <div className="row">
@@ -93,7 +100,7 @@ export default class EarnTron extends Component {
           <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
             <div className="box">
               <div className="icon"><i className="ion-ios-analytics-outline" style={{color: '#ff689b'}}></i></div>
-              <h4 className="title"><a href="#">{invested} TRX</a></h4>
+              <h4 className="title"><a href="">{invested} TRX</a></h4>
               <p className="description">Total invertido</p>
             </div>
           </div>
@@ -126,8 +133,7 @@ export default class EarnTron extends Component {
             <div className="box">
               <div className="icon"><i className="ion-ios-speedometer-outline" style={{color:'#41cf2e'}}></i></div>
               <h4 className="title"><a href="">Disponible</a></h4>
-              <p className="description">{my} TRX</p>
-              <p><button type="button" className="btn btn-info" onClick={() => this.withdraw()}>Retirar {my} TRX</button></p>
+              <p className="description">{balanceRef+my} TRX <button type="button" className="btn btn-info" onClick={() => this.withdraw()}>Retirar</button></p>
             </div>
           </div>
           <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
