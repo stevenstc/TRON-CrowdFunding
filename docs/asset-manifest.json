@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/CrowfundingTRX/static/css/main.8a4d36fd.chunk.css",
-    "main.js": "/CrowfundingTRX/static/js/main.69417e7a.chunk.js",
-    "main.js.map": "/CrowfundingTRX/static/js/main.69417e7a.chunk.js.map",
+    "main.js": "/CrowfundingTRX/static/js/main.05c3bbae.chunk.js",
+    "main.js.map": "/CrowfundingTRX/static/js/main.05c3bbae.chunk.js.map",
     "runtime-main.js": "/CrowfundingTRX/static/js/runtime-main.dcc612dd.js",
     "runtime-main.js.map": "/CrowfundingTRX/static/js/runtime-main.dcc612dd.js.map",
-    "static/js/2.107696a4.chunk.js": "/CrowfundingTRX/static/js/2.107696a4.chunk.js",
-    "static/js/2.107696a4.chunk.js.map": "/CrowfundingTRX/static/js/2.107696a4.chunk.js.map",
+    "static/js/2.7900bff8.chunk.js": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js",
+    "static/js/2.7900bff8.chunk.js.map": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js.map",
     "index.html": "/CrowfundingTRX/index.html",
-    "precache-manifest.15e74d665d03bad4579418e1eb4f2db0.js": "/CrowfundingTRX/precache-manifest.15e74d665d03bad4579418e1eb4f2db0.js",
+    "precache-manifest.a0cbcfca826bb914cc91125411930c25.js": "/CrowfundingTRX/precache-manifest.a0cbcfca826bb914cc91125411930c25.js",
     "service-worker.js": "/CrowfundingTRX/service-worker.js",
     "static/css/main.8a4d36fd.chunk.css.map": "/CrowfundingTRX/static/css/main.8a4d36fd.chunk.css.map",
-    "static/js/2.107696a4.chunk.js.LICENSE.txt": "/CrowfundingTRX/static/js/2.107696a4.chunk.js.LICENSE.txt",
+    "static/js/2.7900bff8.chunk.js.LICENSE.txt": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js.LICENSE.txt",
     "static/media/TronLinkLogo.png": "/CrowfundingTRX/static/media/TronLinkLogo.d3a8f115.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dcc612dd.js",
-    "static/js/2.107696a4.chunk.js",
+    "static/js/2.7900bff8.chunk.js",
     "static/css/main.8a4d36fd.chunk.css",
-    "static/js/main.69417e7a.chunk.js"
+    "static/js/main.05c3bbae.chunk.js"
   ]
 }
