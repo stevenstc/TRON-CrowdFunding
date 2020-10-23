@@ -56,7 +56,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li><a href="https://shasta.tronscan.org/#/account">Ver Contrato</a></li>
+          <li><a href="https://shasta.tronscan.org/#/contract/TQdVp5TijWLXZc5mGNiM1Sc9qGu5QcnFB4/code">Ver Contrato</a></li>
         </ul>
       </nav><!-- .main-nav -->
       
@@ -108,7 +108,7 @@
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
               <div class="icon"><i class="fa fa-photo"></i></div>
               <h4 class="title"><a href="">Gana un 200% de tu inversión</a></h4>
-              <p class="description">El contrato inteligente le paga automáticamente un 2% de su inversión.</p>
+              <p class="description">El contrato inteligente le paga automáticamente cada segundo.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
@@ -157,11 +157,14 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 footer-info">
+          <div class="col-lg-8 col-md-12 footer-info">
             <h3>Earn Tron Contract</h3>
+            <p>Las recompensas de los referidos se distribuyen automáticamente a su saldo y puede retirarlas en cualquier momento, la recompensa varia según el nivel de sercania.*</p>
+            <p>Al realizar tu deposito se cobra una tarifa del 4% que se destina al mantenimiento del sitio web, soporte técnico y el 2% para anuncios de marketing.**</p>
+            <p>Al realizar tu retiro realizamos un interés compuesto del 25% que se añade directamente a tu inversión para promover el largo uso de la plataforma y protegernos de las Ballenas Crypto.***</p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-12 footer-links">
             <h4>Enlaces Útiles</h4>
             <ul>
               <li><a href="#">Inicio</a></li>
@@ -170,23 +173,6 @@
               <li><a href="#">Terms of service</a></li>
               <li><a href="#">Privacy policy</a></li>
             </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contacto</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Email:</strong> info@earntron.ml<br>
-            </p>
-
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Earn Tron Contract</h4>
-            <p>Las recompensas por recomendación se distribuyen automáticamente a su saldo y puede retirarlas en cualquier momento. La transferencia de soporte del 2% se destina al mantenimiento del sitio web, soporte técnico, tarifa administrativa y el 5% para anuncios de marketing.*</p>
           </div>
 
         </div>
@@ -234,6 +220,62 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+
+  <!-- Copiar Link referido y alertas -->
+  <script>
+    
+    document.getElementById('botoncop').addEventListener('click', copiarAlPortapapeles);
+
+    function copiarAlPortapapeles(ev){
+        var codigoACopiar = document.getElementById('textoACopiar');    
+        var seleccion = document.createRange(); 
+        seleccion.selectNodeContents(codigoACopiar);    
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(seleccion);  
+        try {
+            var res = document.execCommand('copy'); 
+            if (res)
+                exito();
+            else
+                fracaso();
+
+            mostrarAlerta();
+        }
+        catch(ex) {
+            excepcion();
+        }
+        window.getSelection().removeRange(seleccion);
+    }
+
+    var divAlerta = document.getElementById('alerta');
+    
+    function exito() {
+        divAlerta.innerText = '¡¡Enlace copiado al portapapeles!!';
+        divAlerta.classList.add('alert-success');
+    }
+
+    function fracaso() {
+        divAlerta.innerText = '¡¡Ha fallado el copiado al portapapeles!!';
+        divAlerta.classList.add('alert-warning');
+    }
+
+    function excepcion() {
+        divAlerta.innerText = 'Se ha producido un error al copiar al portapaples';
+        divAlerta.classList.add('alert-danger');
+    }
+
+    function mostrarAlerta() {
+        divAlerta.classList.remove('invisible');
+        divAlerta.classList.add('visible');
+        setTimeout(ocultarAlerta, 1500);
+    }
+
+    function ocultarAlerta() {
+        divAlerta.innerText = '';
+        divAlerta.classList.remove('alert-success', 'alert-warning', 'alert-danger', 'visible');
+        divAlerta.classList.add('invisible');
+    }
+</script>
 
 </body>
 </html>
