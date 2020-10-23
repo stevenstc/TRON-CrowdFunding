@@ -1,8 +1,8 @@
-## TRON DES-CROWDFUNDING
+## TRON DES-COMMERCE
 
-[Online Demo](https://stevenstc.github.io/CrowfundingTRX/)
+[Online Demo](https://stevenstc.github.io/comercio/)
 
-Es una Dapp construida en TRON. es un ejemplo de como se podria recaudar fondos online sin necesidad de una empresa centralizada
+Es una Dapp construida en TRON. es un ejemplo de como se podria comprar y vender articulos por internet sin necesidad de tener una tienda online
 Maneja repositorios de [TronWeb](https://github.com/tronprotocol/tron-web)
 y está integrada con [TronLink](https://github.com/TronWatch/TronLink).
 
