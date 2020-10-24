@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/CrowfundingTRX/static/css/main.8a4d36fd.chunk.css",
-    "main.js": "/CrowfundingTRX/static/js/main.05c3bbae.chunk.js",
-    "main.js.map": "/CrowfundingTRX/static/js/main.05c3bbae.chunk.js.map",
-    "runtime-main.js": "/CrowfundingTRX/static/js/runtime-main.dcc612dd.js",
-    "runtime-main.js.map": "/CrowfundingTRX/static/js/runtime-main.dcc612dd.js.map",
-    "static/js/2.7900bff8.chunk.js": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js",
-    "static/js/2.7900bff8.chunk.js.map": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js.map",
-    "index.html": "/CrowfundingTRX/index.html",
-    "precache-manifest.8f6550640e680fe43d6a044e613f85d0.js": "/CrowfundingTRX/precache-manifest.8f6550640e680fe43d6a044e613f85d0.js",
-    "service-worker.js": "/CrowfundingTRX/service-worker.js",
-    "static/css/main.8a4d36fd.chunk.css.map": "/CrowfundingTRX/static/css/main.8a4d36fd.chunk.css.map",
-    "static/js/2.7900bff8.chunk.js.LICENSE.txt": "/CrowfundingTRX/static/js/2.7900bff8.chunk.js.LICENSE.txt",
-    "static/media/TronLinkLogo.png": "/CrowfundingTRX/static/media/TronLinkLogo.d3a8f115.png"
+    "main.css": "/static/css/main.11d874ff.chunk.css",
+    "main.js": "/static/js/main.dbc5e318.chunk.js",
+    "main.js.map": "/static/js/main.dbc5e318.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f2d095ad.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f2d095ad.js.map",
+    "static/js/2.1e2d0428.chunk.js": "/static/js/2.1e2d0428.chunk.js",
+    "static/js/2.1e2d0428.chunk.js.map": "/static/js/2.1e2d0428.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.60f170ada4baacb1639d94b2dfe7a5ce.js": "/precache-manifest.60f170ada4baacb1639d94b2dfe7a5ce.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.11d874ff.chunk.css.map": "/static/css/main.11d874ff.chunk.css.map",
+    "static/js/2.1e2d0428.chunk.js.LICENSE.txt": "/static/js/2.1e2d0428.chunk.js.LICENSE.txt",
+    "static/media/TronLinkLogo.png": "/static/media/TronLinkLogo.d3a8f115.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.dcc612dd.js",
-    "static/js/2.7900bff8.chunk.js",
-    "static/css/main.8a4d36fd.chunk.css",
-    "static/js/main.05c3bbae.chunk.js"
+    "static/js/runtime-main.f2d095ad.js",
+    "static/js/2.1e2d0428.chunk.js",
+    "static/css/main.11d874ff.chunk.css",
+    "static/js/main.dbc5e318.chunk.js"
   ]
 }
