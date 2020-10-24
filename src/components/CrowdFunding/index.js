@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import Utils from "../../utils";
 import "./CrowdFunding.scss";
-
-
-/// La direccion de su contrato acá ///////////////////////////////////
-const contractAddress = "TQdVp5TijWLXZc5mGNiM1Sc9qGu5QcnFB4";
-///////////////////////////////////////////////////////////////////////
+import contractAddress from "../Contract";
 
 export default class EarnTron extends Component {
   constructor(props) {

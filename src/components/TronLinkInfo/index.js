@@ -15,9 +15,9 @@ export default class TronLinkInfo extends Component {
 
   // Uncomment each call one at a time to see your account information filled out
   componentDidMount() {
-    this.fetchAccountAddress();
-    this.fetchAccountBalance();
-    this.fetchAccountBandwidth();
+    setInterval(() => this.fetchAccountAddress(),1000);
+    setInterval(() => this.fetchAccountBalance(),1000);
+    setInterval(() => this.fetchAccountBandwidth(),1000);
   }
 
   // // The function below will return an object with address, balance, create_time,
@@ -66,9 +66,9 @@ export default class TronLinkInfo extends Component {
             <h5 className="card-title">Información de la cuenta</h5>
             <h6 className="card-text">
               Dirección:<br></br>
-               <strong><span>{accountAddress}</span></strong><br></br>
+               <strong><span>{accountAddress}</span></strong><br></br><br></br>
               Balance:<br></br>
-               <strong><span>{accountBalance}</span></strong><br></br>
+               <strong><span>{accountBalance} TRX</span></strong><br></br><br></br>
               Bandwidth:<br></br>
                <strong><span>{accountBandwidth}</span></strong><br></br>
               

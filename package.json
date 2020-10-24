@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevenstc/CrowfundingTRX.git"
+    "url": ""
   },
-  "author": "Steven CL",
+  "author": "",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/stevenstc/CrowfundingTRX/issues"
+    "url": ""
   },
-  "homepage": "https://stevenstc.github.io/CrowfundingTRX/",
+  "homepage": "https://earntron.ml",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",

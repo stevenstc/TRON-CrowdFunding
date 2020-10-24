@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import Utils from "../../utils";
-
-
-/// La direccion de su contrato acá ///////////////////////////////////
-const contractAddress = "TQdVp5TijWLXZc5mGNiM1Sc9qGu5QcnFB4";
-///////////////////////////////////////////////////////////////////////
+import contractAddress from "../Contract";
 
 export default class EarnTron extends Component {
   constructor(props) {
@@ -49,6 +45,10 @@ export default class EarnTron extends Component {
       this.setState({
         link: mydireccion,
       });
+    }else{
+      this.setState({
+        link: "Haz una inversión para obtener el LINK de referido",
+      });
     }
   }
     
@@ -87,7 +87,7 @@ export default class EarnTron extends Component {
 
         <header className="section-header">
           <h3>My Office: {direccion}</h3><br></br>
-          <h6><a href={link}>{link}</a>&nbsp;
+          <h6 style={{'text-align': 'center'}}><a href={link}>{link}</a>&nbsp;
           <CopyToClipboard text={link}>
             <button type="button" className="btn btn-info">COPIAR</button>
           </CopyToClipboard>
@@ -100,14 +100,14 @@ export default class EarnTron extends Component {
           <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
             <div className="box">
               <div className="icon"><i className="ion-ios-analytics-outline" style={{color: '#ff689b'}}></i></div>
-              <h4 className="title"><a href="">{invested} TRX</a></h4>
+              <h4 className="title"><a href="#services">{invested} TRX</a></h4>
               <p className="description">Total invertido</p>
             </div>
           </div>
           <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
             <div className="box">
               <div className="icon"><i className="ion-ios-bookmarks-outline" style={{color: '#e9bf06'}}></i></div>
-              <h4 className="title"><a href="">{totalRef} TRX</a></h4>
+              <h4 className="title"><a href="#services">{totalRef} TRX</a></h4>
               <p className="description">Total ganancias por referidos</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default class EarnTron extends Component {
             <div className="box">
               <div className="icon"><i className="ion-ios-paper-outline" style={{color: '#3fcdc7'}}></i></div>
               <p className="description">Mi balance</p>
-              <h4 className="title"><a href="">{my} TRX</a></h4>
+              <h4 className="title"><a href="#services">{my} TRX</a></h4>
               
             </div>
           </div>
@@ -124,7 +124,7 @@ export default class EarnTron extends Component {
             <div className="box">
               <div className="icon"><i className="ion-ios-paper-outline" style={{color: '#3fcdc7'}}></i></div>
               <p className="description">Balance por referidos</p>
-              <h4 className="title"><a href=""> {balanceRef} TRX</a></h4>
+              <h4 className="title"><a href="#services"> {balanceRef} TRX</a></h4>
               
             </div>
           </div>
@@ -132,14 +132,14 @@ export default class EarnTron extends Component {
           <div className="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div className="box">
               <div className="icon"><i className="ion-ios-speedometer-outline" style={{color:'#41cf2e'}}></i></div>
-              <h4 className="title"><a href="">Disponible</a></h4>
+              <h4 className="title"><a href="#services">Disponible</a></h4>
               <p className="description">{balanceRef+my} TRX <button type="button" className="btn btn-info" onClick={() => this.withdraw()}>Retirar</button></p>
             </div>
           </div>
           <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div className="box">
               <div className="icon"><i className="ion-ios-clock-outline" style={{color: '#4680ff'}}></i></div>
-              <h4 className="title"><a href="">Retirado</a></h4>
+              <h4 className="title"><a href="#services">Retirado</a></h4>
               <p className="description">{withdrawn} TRX</p>
             </div>
           </div>
