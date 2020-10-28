@@ -13,28 +13,28 @@ export default class TronLinkInfo extends Component {
     };
   }
 
-  // Uncomment each call one at a time to see your account information filled out
+  
   componentDidMount() {
-    setInterval(() => this.fetchAccountAddress(),1000);
+    setInterval(() => this.fetchAccountAddress(),10000);
     setInterval(() => this.fetchAccountBalance(),1000);
     setInterval(() => this.fetchAccountBandwidth(),1000);
-  }
+  };
 
-  // // The function below will return an object with address, balance, create_time,
-  // // account_resource;
+
   async fetchAccountAddress() {
-    const account = await window.tronWeb.trx.getAccount();
-    const accountAddress = account.address; // HexString(Ascii)
+
+    const account =  await window.tronWeb.trx.getAccount();
+    //const account = await window.tronWeb.trx.getAccount(); 
+    const accountAddress = account.address;
      const accountAddressInBase58 = window.tronWeb.address.fromHex(
        accountAddress
-     ); // Base58
+     );
 
     this.setState({
       accountAddress: accountAddressInBase58
     });
   }
-  //
-  // // The function below will return the account balance in SUN as a number
+
   async fetchAccountBalance() {
     const balanceInSun = await window.tronWeb.trx.getBalance(); //number
     const balanceInTRX = window.tronWeb.fromSun(balanceInSun); //string

@@ -72,7 +72,7 @@ class App extends Component {
         });
 
         resolve();
-      }, 1000);
+      }, 100);
     });
 
     if (!this.state.tronWeb.loggedIn) {
