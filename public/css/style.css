@@ -125,7 +125,7 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-  height: 80px;
+  height: 90px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -136,7 +136,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-pages {
-  height: 70px;
+  height: 60px;
   padding: 5px 0;
 }
 
@@ -1339,13 +1339,12 @@ h6 {
 
 @media (max-width: 991px) {
   #header {
-    height: 60px;
-    padding: 10px 0;
+    height: 85px;
   }
 
   #header .logo h1 {
     font-size: 28px;
-    padding: 8px 0;
+    padding: 2px 0;
   }
 
   #intro {
