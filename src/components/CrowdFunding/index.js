@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Utils from "../../utils";
-import "./CrowdFunding.scss";
 import contractAddress from "../Contract";
 
 export default class EarnTron extends Component {

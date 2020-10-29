@@ -7,7 +7,6 @@ import Datos from "../Datos";
 import Oficina from "../Oficina";
 import TronLinkInfo from "../TronLinkInfo";
 import TronLinkGuide from "../TronLinkGuide";
-import "./App.scss";
 
 const FOUNDATION_ADDRESS = "TWiWt5SEDzaEqS6kE5gandWMNfxR2B5xzg";
 

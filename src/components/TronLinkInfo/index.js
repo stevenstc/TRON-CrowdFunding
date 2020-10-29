@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./TronLinkInfo.scss";
-
 export default class TronLinkInfo extends Component {
   constructor(props) {
     super(props);
