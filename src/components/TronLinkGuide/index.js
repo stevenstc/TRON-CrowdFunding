@@ -6,7 +6,7 @@ import TronLinkLogo from './TronLinkLogo.png';
 const WEBSTORE_URL = 'https://chrome.google.com/webstore/detail/ibnejdfjmmkpcnlpebklmnkoeoihofec/';
 
 const logo = (
-    <div className='logo col-xs-12 col-md-4 text-center'>
+    <div className='col-xs-12 col-md-4 text-center'>
         <img src={ TronLinkLogo } className="img-fluid" alt='TronLink logo' />
     </div>
 );
@@ -22,8 +22,8 @@ const TronLinkGuide = props => {
 
     if(!installed) {
         return (
-            <div className='tronLink row' onClick={ openTronLink }>
-                <div className='info col-xs-12 col-md-8'>
+            <div className='row' onClick={ openTronLink }>
+                <div className='col-xs-12 col-md-8'>
                     <h1>TronLink Required</h1>
                     <p>
                         To create a post or tip others you must install TronLink. TronLink is a TRON wallet for the browser

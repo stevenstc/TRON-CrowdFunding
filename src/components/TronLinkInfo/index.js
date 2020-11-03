@@ -53,7 +53,7 @@ export default class TronLinkInfo extends Component {
 
 
   render() {
-    const { accountAddress, accountBalance, accountBandwidth,} = this.state;
+    const { accountAddress, accountBalance, accountBandwidth} = this.state;
     return (
       <div className="col-lg-5 mb-5">
         <div className="card wow bounceInUp">

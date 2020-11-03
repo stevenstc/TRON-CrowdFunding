@@ -25,18 +25,15 @@ export default class EarnTron extends Component {
             var tmp = GET[i].split('=');
             get[tmp[0]] = unescape(decodeURI(tmp[1]));
         }
-        if (get['capital']) {
-          document.getElementById('tarifa').value = 1;
-          document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+        
+        if (get['ref'].length === 34) {
+          document.getElementById('tarifa').value = 0;
+          document.getElementById('sponsor').value = get['ref'];            
         }else{
-          if (get['ref'].length === 34) {
-            document.getElementById('tarifa').value = 0;
-            document.getElementById('sponsor').value = get['ref'];            
-          }else{
-            document.getElementById('tarifa').value = 0;
-             document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
-          }
+          document.getElementById('tarifa').value = 0;
+           document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
         }
+        
         
     }else{
         document.getElementById('tarifa').value = 0;
@@ -63,10 +60,10 @@ export default class EarnTron extends Component {
       <div className="card wow bounceInUp">
           <i className="fa fa-diamond"></i>
         <div className="card-body">
-          <h5 className="card-title">Gold Premium</h5>
+          <h5 className="card-title">Diamante</h5>
           <h6 className="card-text">
-            Return: <strong>200%</strong><br></br>
-            <strong>2%</strong> per day<br></br>
+            Retorno: <strong>200%</strong><br></br>
+            <strong>2%</strong> por día<br></br>
           </h6>
             <form>
               <div className="form-group">
@@ -78,9 +75,6 @@ export default class EarnTron extends Component {
           
         </div>
       </div>
-        
-
-
 
     );
   }

@@ -7,6 +7,7 @@ import Datos from "../Datos";
 import Oficina from "../Oficina";
 import TronLinkInfo from "../TronLinkInfo";
 import TronLinkGuide from "../TronLinkGuide";
+import PanelOwner from "../PanelOwner";
 
 
 const FOUNDATION_ADDRESS = "TWiWt5SEDzaEqS6kE5gandWMNfxR2B5xzg";
@@ -103,9 +104,21 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.tronWeb.installed) return <TronLinkGuide />;
+    if (!this.state.tronWeb.installed) return (
+      <>
+        <div className="container">
+        <TronLinkGuide />
+        </div>
+      </>
+      );
 
-    if (!this.state.tronWeb.loggedIn) return <TronLinkGuide installed />;
+    if (!this.state.tronWeb.loggedIn) return (
+      <>
+        <div className="container">
+        <TronLinkGuide installed />
+        </div>
+      </>
+      );
 
     return (
       <div>
@@ -118,6 +131,7 @@ class App extends Component {
               <div  className="row row-eq-height justify-content-center">
                 <CrowdFunding />
                 <TronLinkInfo />
+                <PanelOwner />
               </div>
               <div >
                 <Datos />
