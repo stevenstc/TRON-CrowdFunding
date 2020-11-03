@@ -9,29 +9,27 @@ export default class TronLinkInfo extends Component {
       accountBalance: "Billetera NO conectada",
       accountBandwidth: "Billetera NO conectada"
     };
-  }
+  };
 
   
   componentDidMount() {
-    setInterval(() => this.fetchAccountAddress(),10000);
+    setInterval(() => this.fetchAccountAddress(),1000);
     setInterval(() => this.fetchAccountBalance(),1000);
     setInterval(() => this.fetchAccountBandwidth(),1000);
   };
 
 
   async fetchAccountAddress() {
-
     const account =  await window.tronWeb.trx.getAccount();
-    //const account = await window.tronWeb.trx.getAccount(); 
     const accountAddress = account.address;
-     const accountAddressInBase58 = window.tronWeb.address.fromHex(
-       accountAddress
-     );
+    const accountAddressInBase58 = window.tronWeb.address.fromHex(
+      accountAddress
+    );
 
     this.setState({
       accountAddress: accountAddressInBase58
     });
-  }
+  };
 
   async fetchAccountBalance() {
     const balanceInSun = await window.tronWeb.trx.getBalance(); //number
@@ -42,7 +40,7 @@ export default class TronLinkInfo extends Component {
       //accountBalance: balanceInSun // Muestra el balance en SUN
       accountBalance: balanceInTRX
     });
-  }
+  };
   //
   // // La funcion aqui abajo muestra el ancho de banda como un numero
   async fetchAccountBandwidth() {
@@ -51,7 +49,7 @@ export default class TronLinkInfo extends Component {
     this.setState({
       accountBandwidth: accountBandwidth
     });
-  }
+  };
 
 
   render() {
@@ -61,7 +59,7 @@ export default class TronLinkInfo extends Component {
         <div className="card wow bounceInUp">
             <i className="fa fa-address-card-o"></i>
           <div className="card-body">
-            <h5 className="card-title">Información de la cuenta</h5>
+            <h5 className="card-title">Billetera Conectada</h5>
             <h6 className="card-text">
               Dirección:<br></br>
                <strong><span>{accountAddress}</span></strong><br></br><br></br>
@@ -75,5 +73,5 @@ export default class TronLinkInfo extends Component {
         </div>
       </div>
     );
-  }
+  };
 }

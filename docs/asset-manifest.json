@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/earntron.ml-temporal/static/js/main.a05b2fed.chunk.js",
+    "main.js.map": "/earntron.ml-temporal/static/js/main.a05b2fed.chunk.js.map",
+    "runtime-main.js": "/earntron.ml-temporal/static/js/runtime-main.6f8abb3b.js",
+    "runtime-main.js.map": "/earntron.ml-temporal/static/js/runtime-main.6f8abb3b.js.map",
+    "static/js/2.83626a0a.chunk.js": "/earntron.ml-temporal/static/js/2.83626a0a.chunk.js",
+    "static/js/2.83626a0a.chunk.js.map": "/earntron.ml-temporal/static/js/2.83626a0a.chunk.js.map",
+    "index.html": "/earntron.ml-temporal/index.html",
+    "precache-manifest.9baa86bb6c52cb940048dadd0bb2457c.js": "/earntron.ml-temporal/precache-manifest.9baa86bb6c52cb940048dadd0bb2457c.js",
+    "service-worker.js": "/earntron.ml-temporal/service-worker.js",
+    "static/js/2.83626a0a.chunk.js.LICENSE.txt": "/earntron.ml-temporal/static/js/2.83626a0a.chunk.js.LICENSE.txt",
+    "static/media/TronLinkLogo.png": "/earntron.ml-temporal/static/media/TronLinkLogo.d3a8f115.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f8abb3b.js",
+    "static/js/2.83626a0a.chunk.js",
+    "static/js/main.a05b2fed.chunk.js"
+  ]
+}

@@ -37,8 +37,8 @@ const TronLinkGuide = props => {
     }
 
     return (
-        <div className='tronLink hover' onClick={ openTronLink }>
-            <div className='info'>
+        <div className='tronLink row' onClick={ openTronLink }>
+            <div className='info col-xs-12 col-md-8'>
                 <h1>Log in Required</h1>
                 <p>
                     TronLink is installed but you must first log in. Open TronLink from the browser bar and set up your

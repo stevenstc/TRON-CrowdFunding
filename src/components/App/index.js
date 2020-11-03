@@ -8,6 +8,7 @@ import Oficina from "../Oficina";
 import TronLinkInfo from "../TronLinkInfo";
 import TronLinkGuide from "../TronLinkGuide";
 
+
 const FOUNDATION_ADDRESS = "TWiWt5SEDzaEqS6kE5gandWMNfxR2B5xzg";
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
 
       const timer = setInterval(() => {
         if (tries >= 10) {
+
           const TRONGRID_API = "https://api.trongrid.io";
 
           window.tronWeb = new TronWeb(

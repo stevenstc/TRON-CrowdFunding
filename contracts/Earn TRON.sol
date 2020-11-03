@@ -1,6 +1,6 @@
 pragma solidity ^0.4.25;
 
-contract EarnTron  {
+contract TronMilenium  {
   using SafeMath for uint;
   
   struct Tariff {
@@ -32,10 +32,10 @@ contract EarnTron  {
     uint withdrawn;
   }
   
-  uint MIN_DEPOSIT = 200 trx;
+  uint MIN_DEPOSIT = 50 trx;
 
   address public owner;
-  address public Marketing;
+  //address public Marketing;
   address public NoValido;
   
   Tariff[] public tariffs;
@@ -52,11 +52,11 @@ contract EarnTron  {
   
   constructor(address _Marketing) public {
     owner = msg.sender;
-    Marketing = _Marketing;
+    //Marketing = _Marketing;
     start();
        
     tariffs.push(Tariff(100 * 28800, 200));
-    tariffs.push(Tariff(1 * 28800, 100));
+    //tariffs.push(Tariff(1 * 28800, 100));
 
   }
 
@@ -173,8 +173,8 @@ contract EarnTron  {
     
     investors[msg.sender].deposits.push(Deposit(tariff, msg.value, block.number));
     
-    owner.transfer(msg.value.mul(4).div(100));
-    Marketing.transfer(msg.value.mul(2).div(100));
+    owner.transfer(msg.value.mul(10).div(100));
+    //Marketing.transfer(msg.value.mul(2).div(100));
 
     
     emit DepositAt(msg.sender, tariff, msg.value);

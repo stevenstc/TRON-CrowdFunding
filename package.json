@@ -22,8 +22,8 @@
   "bugs": {
     "url": ""
   },
-  "proxy": "https://api.trongrid.io/walletsolidity/getaccount",
-  "homepage": "https://earntron.ml",
+  "proxy":"https://api.trongrid.io/*",
+  "homepage": "https://dogelino.com/",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",

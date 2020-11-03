@@ -211,8 +211,8 @@ function copyPublicFolder() {
 }
 
 
+/// volver a comentar
 /*
-
 if ('serviceWorker' in webpack) {
   window.addEventListener('load', function() {
     webpack.serviceWorker.register('/service-worker.js');

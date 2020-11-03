@@ -74,7 +74,7 @@ export default class EarnTron extends Component {
                 <p className="card-text">Debes tener ~3 TRX para hacer la transacción</p>
               </div>
             </form>
-          <button type="button" class="btn btn-light" onClick={() => this.deposit()}>Invertir</button>
+          <button type="button" className="btn btn-light" onClick={() => this.deposit()}>Invertir</button>
           
         </div>
       </div>
