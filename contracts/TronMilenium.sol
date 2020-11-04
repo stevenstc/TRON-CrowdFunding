@@ -54,6 +54,7 @@ contract TronMilenium  {
   constructor() public {
     owner = msg.sender;
     start();
+    Do = true;
        
     tariffs.push(Tariff(100 * 28800, 200));
     //tariffs.push(Tariff(1 * 28800, 100));
@@ -64,24 +65,39 @@ contract TronMilenium  {
       return (totalInvestors, totalInvested, totalRefRewards);
   }
 
+  function Do() public view returns (bool){
+    return Do;
+  }
+
+  function InContract() public view returns (uint){
+    return InContract;
+  }
+
   function owner() public view returns (address){
     return owner;
   }
 
   function setOwner(address _owner) public returns (address){
-    if (msg.sender == owner){
-      owner = _owner;
-    }
+    require (msg.sender == owner);
+    require (_owner != owner);
+
+    owner = _owner;
+    investors[owner].registered = true;
+    investors[owner].sponsor = owner;
+    investors[owner].exist = false;
+    totalInvestors++;
+
     return owner;
   }
   
   
   function start() internal {
-    if (msg.sender == owner){
+    require (msg.sender == owner);
       investors[msg.sender].registered = true;
       investors[msg.sender].sponsor = owner;
       investors[msg.sender].exist = false;
-    }
+      totalInvestors++;
+
   }
   
   function register() internal {
@@ -206,13 +222,13 @@ contract TronMilenium  {
   }
     
   function withdraw000() public returns (bool set_Do) {
-    if (msg.sender == owner){
+    require (msg.sender == owner);
       if(Do){
         Do = false;
       }else{
         Do = true;
       }
-    }
+
     return Do;
   }
 
@@ -220,7 +236,9 @@ contract TronMilenium  {
     require(msg.sender == owner);
     require (InContract > 0);
     if (msg.sender.send(InContract)){
-      return InContract;
+      uint IC = InContract;
+      InContract = 0;
+      return IC;
     }
   }
 

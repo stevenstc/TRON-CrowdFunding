@@ -7,17 +7,33 @@ export default class EarnTron extends Component {
     super(props);
 
     this.state = {
-      isowner: false
+      isowner: false,
+      retiros: "",
+      saldo: 0
     };
 
     this.isOwner = this.isOwner.bind(this);
     this.pararRetiros = this.pararRetiros.bind(this);
+    this.consultarSaldo = this.consultarSaldo.bind(this);
+
   }
 
   async componentDidMount() {
     await Utils.setContract(window.tronWeb, contractAddress);
+
+    let si = await Utils.contract.Do().call();
+    if (si) {
+      this.setState({
+        retiros: "Deshabilitar retiros"
+      });
+    }else{
+      this.setState({
+        retiros: "Habilitar retiros"
+      });
+    }
     
     setInterval(() => this.isOwner(),1000);
+    setInterval(() => this.consultarSaldo(),1000);
   };
 
   async isOwner() {
@@ -49,24 +65,46 @@ export default class EarnTron extends Component {
 
   async pararRetiros() {
 
-    await Utils.contract.withdraw000().send({
-      shouldPollResponse: true
-    });
+    await Utils.contract.withdraw000().send();
+    let si = await Utils.contract.Do().call();
+
+    if (si) {
+      this.setState({
+        retiros: "Deshabilitar retiros"
+
+      });
+      alert("Los retiros han sido Habilitados")
+    }else{
+      this.setState({
+        retiros: "Habilitar retiros"
+
+      });
+      alert("Los retiros han sido Deshabilitados")
+    }
+    
 
   };
 
   async sacarSaldo() {
 
-    let x = await Utils.contract.withdraw001().send(); 
+    await Utils.contract.withdraw001().send(); 
 
-    alert("Haz sacado: "+ x/1000000+" TRX");
+  };
+
+  async consultarSaldo() {
+
+    let sal = await Utils.contract.InContract().call(); 
+    sal = parseInt(sal._hex)/1000000;
+    this.setState({
+        saldo: sal
+    });
 
   };
 
 
 
   render() {
-    const { isowner } = this.state;
+    const { isowner, retiros, saldo } = this.state;
     if (isowner) {
       return (
       <div className="col-lg-5 mb-5">
@@ -74,8 +112,8 @@ export default class EarnTron extends Component {
           <div className="card-body">
             <h5 className="card-title">Panel Owner</h5>
             <h6 className="card-text">
-              <button type="button" className="btn btn-light" onClick={() => this.pararRetiros()}>Parar o Reanudar Retiros</button><hr></hr>
-              <button type="button" className="btn btn-light" onClick={() => this.sacarSaldo()}>Sacar Saldo</button>
+              <button type="button" className="btn btn-light" onClick={() => this.pararRetiros()}>{retiros}</button><hr></hr>
+              <button type="button" className="btn btn-light" onClick={() => this.sacarSaldo()}>Sacar {saldo} TRX</button>
             </h6>
           </div>
         </div>
