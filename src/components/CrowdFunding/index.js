@@ -67,7 +67,7 @@ export default class EarnTron extends Component {
           </h6>
             <form>
               <div className="form-group">
-                <input type="text" className="form-control" id="amount" placeholder="Min. 200 TRX"></input>
+                <input type="text" className="form-control" id="amount" placeholder="Min. 50 TRX"></input>
                 <p className="card-text">Debes tener ~3 TRX para hacer la transacción</p>
               </div>
             </form>

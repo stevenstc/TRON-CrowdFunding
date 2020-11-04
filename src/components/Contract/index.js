@@ -1,5 +1,5 @@
 
 /// La direccion de su contrato acá ///////////////////////////////////
-const contractAddress = "TU3CMHwL5aEgpAUddw6K9hSfD5QSStLZA4";
+const contractAddress = "TKquUag8nLxN2adaJZ9sPFhLVRAT1iFztR";
 
 export default contractAddress;

