@@ -22,7 +22,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "https://tronmilenium.ml/",
+  "homepage": "https://stevenstc.github.io/TRON-CrowdFunding/",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
