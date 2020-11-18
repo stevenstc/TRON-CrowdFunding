@@ -45,12 +45,12 @@ export default class EarnTron extends Component {
         </div>
 
         <div className="col-lg-4 col-12 text-center">
-          <span data-toggle="counter-up">{totalInvested} TRX</span>
+          <span data-toggle="counter-up">{totalInvested.toFixed(2)} TRX</span>
           <p>Invertido Global</p>
         </div>
 
         <div className="col-lg-4 col-12 text-center">
-          <span data-toggle="counter-up">{totalRefRewards} TRX</span>
+          <span data-toggle="counter-up">{totalRefRewards.toFixed(2)} TRX</span>
           <p>Recompensas  Globales Referidos</p>
         </div>
 
