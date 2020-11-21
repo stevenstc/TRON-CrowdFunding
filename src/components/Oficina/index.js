@@ -9,6 +9,7 @@ export default class EarnTron extends Component {
 
     this.state = {
       direccion: "",
+      link2: "#",
       link: "Haz una inversión para obtener el LINK de referido",
       registered: false,
       balanceRef: 0,
@@ -43,11 +44,13 @@ export default class EarnTron extends Component {
       mydireccion = window.tronWeb.address.fromHex(mydireccion.address)
       mydireccion = loc+'?ref='+mydireccion;
       this.setState({
-        link: mydireccion,
+        link2: mydireccion,
+        link: "Presiona COPIAR para obtener el LINK de referido"
       });
     }else{
       this.setState({
-        link: "Haz una inversión para obtener el LINK de referido",
+        link2: "https://earntron.ml/",
+        link: "Haz una inversión para obtener el LINK de referido"
       });
     }
   }
@@ -79,20 +82,20 @@ export default class EarnTron extends Component {
 
 
   render() {
-    const { balanceRef, totalRef, invested,  withdrawn , my, direccion, link} = this.state;
+    const { balanceRef, totalRef, invested,  withdrawn , my, direccion, link, link2} = this.state;
 
     return (
       
       <div className="container">
 
         <header className="section-header">
-          <h3>My Office:</h3><br></br>
-          <p>{direccion}</p><br></br>
-          <h6 style={{'text-align': 'center'}}><a href={link}>{link}</a>&nbsp;
-          <CopyToClipboard text={link}>
+          <h3>My Office:</h3>
+          <p style={{'text-align': 'center','max-width': '90%'}}>{direccion}<br></br>
+          <a href={link2}>{link}</a><br></br>
+          <CopyToClipboard text={link2}>
             <button type="button" className="btn btn-info">COPIAR</button>
           </CopyToClipboard>
-          </h6><br></br>
+          </p>
           
         </header>
 
