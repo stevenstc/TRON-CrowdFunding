@@ -8,10 +8,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && npx rimraf docs && npx move-cli build docs",
-    "test": "node scripts/test.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages - build"
+    "build": "node scripts/build.js && npx rimraf docs && npx move-cli build docs"
   },
   "repository": {
     "type": "git",
@@ -22,7 +19,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "https://stevenstc.github.io/TRON-CrowdFunding/",
+  "homepage": "https://tudireccion.com",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
