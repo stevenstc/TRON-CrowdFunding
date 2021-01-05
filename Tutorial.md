@@ -46,7 +46,7 @@
 
 ### NPM
 
-- Make sure you have NPM installed. You can install it by following instructions here: [install NPM](https://www.npmjs.com/get-npm). using NVM (Node Version Manager) is recommended, and directions can be found [here](https://medium.com/@Joachim8675309/installing-node-js-with-nvm-4dc469c977d9).
+- Asegurese de que tiene NPM instalado. Puede instalarlo siguiendo las siguientes instruciones: [instalar NPM](https://www.npmjs.com/get-npm). se recomienda usar NVM (Node Version Manager) y las instrucciones las puede encontrar [aquí](https://medium.com/@Joachim8675309/installing-node-js-with-nvm-4dc469c977d9).
 
 ### TronBox
 
@@ -55,7 +55,7 @@
 - [TronBox GitHub](https://github.com/tronprotocol/tron-box).
 - [TronBox Documentation](https://developers.tron.network/docs/tron-box-user-guide).
 
-## Let's begin coding your first dApp on Tron!
+## ¡Vamos a programar tu primer DApp en Tron!
 
 ### Set up the Project
 
