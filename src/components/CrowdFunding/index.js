@@ -28,20 +28,20 @@ export default class EarnTron extends Component {
         }
         if (get['capital']) {
           document.getElementById('tarifa').value = 1;
-          document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+          document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
         }else{
           if (get['ref'].length === 34) {
             document.getElementById('tarifa').value = 0;
             document.getElementById('sponsor').value = get['ref'];            
           }else{
             document.getElementById('tarifa').value = 0;
-             document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+             document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
           }
         }
         
     }else{
         document.getElementById('tarifa').value = 0;
-        document.getElementById('sponsor').value = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb'; 
+        document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF'; 
     }
 
     let amount = document.getElementById("amount").value;

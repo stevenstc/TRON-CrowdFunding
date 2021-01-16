@@ -136,8 +136,8 @@ h6 {
 
 #header.header-scrolled,
 #header.header-pages {
-  height: 70px;
-  padding: 5px 0;
+  height: 60px;
+  padding: 0px 0;
 }
 
 #header .logo h1 {
@@ -1339,8 +1339,8 @@ h6 {
 
 @media (max-width: 991px) {
   #header {
-    height: 60px;
-    padding: 10px 0;
+    height: 70px;
+    padding: 5px 0;
   }
 
   #header .logo h1 {
