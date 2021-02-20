@@ -26,18 +26,15 @@ export default class EarnTron extends Component {
             var tmp = GET[i].split('=');
             get[tmp[0]] = unescape(decodeURI(tmp[1]));
         }
-        if (get['capital']) {
-          document.getElementById('tarifa').value = 1;
-          document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
+        
+        if (await window.tronWeb.isAddress(get['ref'])) {
+          document.getElementById('tarifa').value = 0;
+          document.getElementById('sponsor').value = get['ref'];            
         }else{
-          if (get['ref'].length === 34) {
-            document.getElementById('tarifa').value = 0;
-            document.getElementById('sponsor').value = get['ref'];            
-          }else{
-            document.getElementById('tarifa').value = 0;
-             document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
-          }
+          document.getElementById('tarifa').value = 0;
+           document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
         }
+        
         
     }else{
         document.getElementById('tarifa').value = 0;
