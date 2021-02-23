@@ -26,10 +26,6 @@ export default class EarnTron extends Component {
             var tmp = GET[i].split('=');
             get[tmp[0]] = unescape(decodeURI(tmp[1]));
         }
-        if (get['capital']) {
-          document.getElementById('tarifa').value = 1;
-          document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
-        }else{
           if (get['ref'].length === 34) {
             document.getElementById('tarifa').value = 0;
             document.getElementById('sponsor').value = get['ref'];            
@@ -37,7 +33,7 @@ export default class EarnTron extends Component {
             document.getElementById('tarifa').value = 0;
              document.getElementById('sponsor').value = 'TXkyzBxJqjYj18Kg48rLv7ZEmx8ayptPoF';
           }
-        }
+        
         
     }else{
         document.getElementById('tarifa').value = 0;
@@ -72,7 +68,7 @@ export default class EarnTron extends Component {
             <form>
               <div className="form-group">
                 <input type="text" className="form-control" id="amount" placeholder="Min. 200 TRX"></input>
-                <p className="card-text">Debes tener ~3 TRX para hacer la transacción</p>
+                <p className="card-text">Debes tener ~50 TRX para hacer la transacción</p>
               </div>
             </form>
           <button type="button" class="btn btn-light" onClick={() => this.deposit()}>Invertir</button>
