@@ -51,7 +51,7 @@ export default class EarnTron extends Component {
       });
     }
   }
-    
+
 
   async Investors() {
 
@@ -82,21 +82,21 @@ export default class EarnTron extends Component {
     const { balanceRef, totalRef, invested,  withdrawn , my, direccion, link} = this.state;
 
     return (
-      
+
       <div className="container">
 
         <header style={{'text-align': 'center'}} className="section-header">
           <h3 className="white"><span style={{'font-weight': 'bold'}}>
           Mi Oficina:</span> <br></br>
-          <span style={{'font-size': '18px'}}>{direccion}</span></h3><br></br>
+          <span style={{'font-size': '11px'}}>{direccion}</span></h3><br></br>
           <h3 className="white" style={{'font-weight': 'bold'}}>Link de referido:</h3>
-          <h6 className="white" ><a href={link}>{link}</a>&nbsp;
+          <h6 className="white" style={{'padding': '1.5em', 'fontSize': '11px'}}><a href={link}>{link}</a><br /><br />
           <CopyToClipboard text={link}>
             <button type="button" className="btn btn-info">COPIAR</button>
           </CopyToClipboard>
           </h6>
           <hr></hr>
-          
+
         </header>
 
         <div className="row">
@@ -121,7 +121,7 @@ export default class EarnTron extends Component {
               <div className="icon"><i className="ion-ios-paper-outline" style={{color: '#3fcdc7'}}></i></div>
               <p className="description">Mi balance</p>
               <h4 className="title"><a href="#services">{my} TRX</a></h4>
-              
+
             </div>
           </div>
           <div className="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
@@ -129,7 +129,7 @@ export default class EarnTron extends Component {
               <div className="icon"><i className="ion-ios-paper-outline" style={{color: '#3fcdc7'}}></i></div>
               <p className="description">Balance por referidos</p>
               <h4 className="title"><a href="#services"> {balanceRef} TRX</a></h4>
-              
+
             </div>
           </div>
 
@@ -151,7 +151,7 @@ export default class EarnTron extends Component {
         </div>
 
       </div>
-    
+
 
 
 
